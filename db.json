@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "4",
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "role": "editor",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "name": "Tom White",
+      "email": "tom.white@example.com",
+      "role": "viewer",
+      "status": "Active"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": [
+        "create",
+        "    read",
+        "    update",
+        " delete"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "permissions": [
+        "read",
+        "update"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Viewer",
+      "permissions": [
+        "read"
+      ]
+    },
+    {
+      "id": "c60930d5-ce09-4676-b548-15d8097a232c",
+      "name": "User",
+      "permissions": [
+        "Read"
+      ]
+    },
+    {
+      "id": "b5d9b16c-57c1-4e46-bf6f-f7f762f64d59",
+      "name": "Maneger",
+      "permissions": [
+        "Create",
+        "Read",
+        "update"
+      ]
+    },
+    {
+      "id": "b1064c73-da80-4484-a3f2-139b88757866",
+      "name": "Employee",
+      "permissions": [
+        "Create",
+        "read"
+      ]
+    }
+  ]
+}
