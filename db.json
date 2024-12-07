@@ -13,6 +13,13 @@
       "email": "tom.white@example.com",
       "role": "viewer",
       "status": "Active"
+    },
+    {
+      "id": "7bbc3bf6-c25a-4f64-aa59-decf55867519",
+      "name": "Jone doe",
+      "role": "User",
+      "email": "Jone.doe@example.com",
+      "status": "Active"
     }
   ],
   "roles": [
