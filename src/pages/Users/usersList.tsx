@@ -36,7 +36,7 @@ function UsersList() {
 
   }
   useEffect(() => {
-    axios.get<User[]>(`${import.meta.env.BASE_URL}/users`).then((response) => {
+    axios.get<User[]>(`${import.meta.env.VITE_BASE_URL}/users`).then((response) => {
       setUsers(response.data);
     });
   }, []);
@@ -46,7 +46,7 @@ function UsersList() {
       return
       
     }
-    axios.put<User>(`${import.meta.env.BASE_URL}/users/${EditedUser?.id}`, EditedUser).then((response) => {
+    axios.put<User>(`${import.meta.env.VITE_BASE_URL}/users/${EditedUser?.id}`, EditedUser).then((response) => {
       console.log(response)
 setUsers((prev) =>
       prev.map((role) => (role.id === response.data.id ? response.data : role))
@@ -57,14 +57,14 @@ setUsers((prev) =>
   }
 
   const deleteUser = (id: number) => {
-    axios.delete(`${import.meta.env.BASE_URL}/users/${id}`).then(() => {
+    axios.delete(`${import.meta.env.VITE_BASE_URL}/users/${id}`).then(() => {
       filteruser(id)
     });
   };
 
 
   const addnewUser = (newuser: User) => {
-    axios.post<User>(`${import.meta.env.BASE_URL}/users`, newuser).then((response) => {
+    axios.post<User>(`${import.meta.env.VITE_BASE_URL}/users`, newuser).then((response) => {
             setUsers((prev)=>[...prev,response.data]);
       setnewUsers(BaseData)
       setAddUser(false)
