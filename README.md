@@ -1,8 +1,7 @@
-Below is a detailed README.md file for your project:
 
 User Management System
 
-A user-friendly React application for managing a list of users. This application allows CRUD (Create, Read, Update, Delete) operations on users and integrates seamlessly with a RESTful API for data persistence.
+A user-friendly RBAC React application for managing a list of users. This application allows CRUD (Create, Read, Update, Delete) operations on users and integrates seamlessly with a RESTful API for data persistence.
 
 Features
 
@@ -17,7 +16,7 @@ Features
 	•	State Management:
 	•	Managed using React’s useState and useEffect hooks.
 	•	API Integration:
-	•	CRUD operations using Axios for seamless interaction with a RESTful API.
+	•	CRUD operations using Axios for seamless interaction with a RESTful API running on JSON Server.
 	•	Reusable Components:
 	•	Custom reusable buttons and input components for better modularity.
 	•	Responsive Design:
@@ -43,7 +42,7 @@ Installation
 
 	1.	Clone this repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Mayurwaghgpr/Admin-dash-board.git
 cd your-repo-name
 
 
@@ -78,16 +77,19 @@ Folder Structure
 
 src/
 ├── components/
+|   ├── NaveBar.tsx  
 │   ├── CommonInput.tsx       # Reusable input component
 │   ├── SaveBtn.tsx           # Save button
 │   ├── CancelBtn.tsx         # Cancel button
 │   ├── EditBtn.tsx           # Edit button
 │   ├── DeleteBtn.tsx         # Delete button
 ├── pages/
-│   ├── NaveBar.tsx           # Navigation bar
-│   ├── UsersList.tsx         # User management page
+|   ├── Rolse/
+|       ├──RolesList.tsx      #Role management page
+|   ├── Users/
+│   	├── UsersList.tsx     # User management page
 ├── App.tsx                   # Main app entry point
-├── index.tsx                 # React DOM rendering
+├── main.tsx                  # React DOM rendering
 └── styles/                   # Tailwind and global CSS
 
 Usage
@@ -143,7 +145,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 
 For any questions or feedback, feel free to reach out:
-	•	Email: your-email@example.com
-	•	GitHub: your-username
+	•	Email: mayur2002wagh@gmail.com
+	•	GitHub:[MayurWagh](https://github.com/Mayurwaghgpr)
 
-Let me know if you’d like to add anything specific to the README file!
