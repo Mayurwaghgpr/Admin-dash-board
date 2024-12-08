@@ -8,6 +8,8 @@ Features
 	•	Navigation Bar:
 	•	Easily navigate between Home, UserList, and RoleList pages.
 	•	Active link styling using NavLink from React Router.
+	•	Lazy Loading:
+	•	Added lazy loading for optimize app performance
 	•	User Management:
 	•	Fetch users from an API and display them in a responsive table.
 	•	Add new users with a modal form.
@@ -83,6 +85,8 @@ src/
 │   ├── CancelBtn.tsx         # Cancel button
 │   ├── EditBtn.tsx           # Edit button
 │   ├── DeleteBtn.tsx         # Delete button
+│   ├── Spinner.tsx           # spiner loader
+│   ├── LoaderScreen.tsx      # screen loader
 ├── pages/
 |   ├── Rolse/
 |       ├──RolesList.tsx      #Role management page
