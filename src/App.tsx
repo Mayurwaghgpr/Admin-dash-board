@@ -14,17 +14,18 @@ function App() {
   return (
 
     <main className="bg-[#0b0b0b] bg-[url('./assets/images/micro_carbon.png')] w-full overflow-auto text-slate-400 font-thin h-screen flex items-center flex-col ">
-      <NaveBar/>
+      <NaveBar />
+          <Suspense fallback={<LoaderScreen/>}>
       <Routes>
-        <Suspense fallback={<LoaderScreen/>}>
+    
         <Route path='/' element={<Home />} />
 
         <Route path='/role' element={<RolseList />} />
        
           <Route path='/user' element={<UsersList />} />
-          </Suspense>
+     
       </Routes>
-      
+           </Suspense>
 
 
 
