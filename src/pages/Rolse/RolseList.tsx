@@ -40,14 +40,14 @@ function RolesList() {
   };
 
   useEffect(() => {
-    axios.get<Role[]>(`${import.meta.env.VITE_BASE_URL}/roles`).then((response) => {
+    axios.get<Role[]>(`${import.meta.env.VITE_BASE_URL}/api/roles`).then((response) => {
       setRoles(response.data);
     });
   }, []);
 
   const editRole = () => {
     if (!EditedData) return;
-    axios.put<Role>(`${import.meta.env.VITE_BASE_URL}/roles/${EditedData?.id}`, EditedData).then((response) => {
+    axios.put<Role>(`${import.meta.env.VITE_BASE_URL}/api/roles/${EditedData?.id}`, EditedData).then((response) => {
       setRoles((prev) =>
         prev.map((role) => (role.id === response.data.id ? response.data : role))
       );
@@ -64,7 +64,7 @@ function RolesList() {
   };
 
   const addNewRole = (role: Role) => {
-    axios.post<Role>(`${import.meta.env.VITE_BASE_URL}/roles`, role).then((response) => {
+    axios.post<Role>(`${import.meta.env.VITE_BASE_URL}/api/roles`, role).then((response) => {
       setRoles((prev) => [...prev, response.data]);
       filterRole(role.id);
     });
@@ -72,7 +72,7 @@ function RolesList() {
 
 
   const deleteRole = (id:any) => {
-    axios.delete(`${import.meta.env.VITE_BASE_URL}/roles/${id}`).then(() => {
+    axios.delete(`${import.meta.env.VITE_BASE_URL}/api/roles/${id}`).then(() => {
       filterRole(id);
     })
   }
