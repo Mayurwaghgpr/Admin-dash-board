@@ -4,6 +4,7 @@ import { join } from 'path';
 export default (req, res) => {
   const server = createServer();
   const router = server.router(join(process.cwd(), 'db.json'));
+  console.log(router)
   const middlewares = jsonServer.defaults();
 
   server.use(middlewares);
