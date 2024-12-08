@@ -40,14 +40,14 @@ function RolesList() {
   };
 
   useEffect(() => {
-    axios.get<Role[]>('http://localhost:3001/roles').then((response) => {
+    axios.get<Role[]>(`${import.meta.env.BASE_URL}/roles`).then((response) => {
       setRoles(response.data);
     });
   }, []);
 
   const editRole = () => {
     if (!EditedData) return;
-    axios.put<Role>(`http://localhost:3001/roles/${EditedData?.id}`, EditedData).then((response) => {
+    axios.put<Role>(`${import.meta.env.BASE_URL}/roles/${EditedData?.id}`, EditedData).then((response) => {
       setRoles((prev) =>
         prev.map((role) => (role.id === response.data.id ? response.data : role))
       );
@@ -64,7 +64,7 @@ function RolesList() {
   };
 
   const addNewRole = (role: Role) => {
-    axios.post<Role>('http://localhost:3001/roles', role).then((response) => {
+    axios.post<Role>(`${import.meta.env.BASE_URL}/roles`, role).then((response) => {
       setRoles((prev) => [...prev, response.data]);
       filterRole(role.id);
     });
@@ -72,7 +72,7 @@ function RolesList() {
 
 
   const deleteRole = (id:any) => {
-    axios.delete(`http://localhost:3001/roles/${id}`).then(() => {
+    axios.delete(`${import.meta.env.BASE_URL}/roles/${id}`).then(() => {
       filterRole(id);
     })
   }
