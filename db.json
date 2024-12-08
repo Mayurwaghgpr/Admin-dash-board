@@ -1,17 +1,10 @@
 {
   "users": [
     {
-      "id": "4",
-      "name": "Alice Brown",
-      "email": "alice.brown@example.com",
-      "role": "editor",
-      "status": "Active"
-    },
-    {
       "id": "5",
       "name": "Tom White",
+      "role": "maneger",
       "email": "tom.white@example.com",
-      "role": "viewer",
       "status": "Active"
     },
     {
@@ -20,19 +13,23 @@
       "role": "User",
       "email": "Jone.doe@example.com",
       "status": "Active"
+    },
+    {
+      "id": "e162d7ca-3a77-416c-99f3-cc041a768e88",
+      "name": "mayur wagh",
+      "role": "maneger",
+      "status": "Active",
+      "email": "mayur2002wagh@gmail.com"
+    },
+    {
+      "id": "26069f4e-68d0-49dc-ab04-01ed9be8d95e",
+      "name": "Bantiwagh",
+      "role": "maneger",
+      "status": "Active",
+      "email": "mayur2002wagh@gmail.com"
     }
   ],
   "roles": [
-    {
-      "id": "1",
-      "name": "Admin",
-      "permissions": [
-        "create",
-        "    read",
-        "    update",
-        " delete"
-      ]
-    },
     {
       "id": "2",
       "name": "Editor",
