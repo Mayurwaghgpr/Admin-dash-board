@@ -17,13 +17,9 @@ function App() {
       <NaveBar />
           <Suspense fallback={<LoaderScreen/>}>
       <Routes>
-    
         <Route path='/' element={<Home />} />
-
         <Route path='/role' element={<RolseList />} />
-       
           <Route path='/user' element={<UsersList />} />
-     
       </Routes>
            </Suspense>
 
