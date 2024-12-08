@@ -30,7 +30,7 @@ function UsersList() {
   const [EditedUser, setEditedUser] = useState<User>();
   const [AddUser, setAddUser] = useState(false);
   const inputRef = useRef<HTMLInputElement[]>([])
-  
+  console.log(import.meta.env.VITE_BASE_URL)
   const filteruser = (userId: any) => {
       setUsers(users.filter((user) => user.id !== userId)); 
 
